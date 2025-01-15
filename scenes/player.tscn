@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://cx4rc224ppfkd"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_0m3qi"]
+[ext_resource type="Texture2D" uid="uid://618g457oelvj" path="res://assets/imprisonmentOfJacob/dude.png" id="2_1lp83"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv7jr"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raku0"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3ils"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8teg"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ajhp"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deq0o"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46dkl"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(224, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43wuv"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(256, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2jx3"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctf0a"]
+atlas = ExtResource("2_1lp83")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1b2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv7jr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raku0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3ils")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8teg")
+}],
+"loop": true,
+"name": &"move_down_anim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ajhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_deq0o")
+}],
+"loop": true,
+"name": &"move_left_anim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46dkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43wuv")
+}],
+"loop": true,
+"name": &"move_right_anim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2jx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctf0a")
+}],
+"loop": true,
+"name": &"move_up_anim",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_0m3qi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g1b2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
