@@ -3,7 +3,13 @@ extends CharacterBody2D
 @export var speed = 200
 @export var friction = 0.5
 @export var acceleration = 0.5
-@export var bullet_scene: PackedScene
+
+@onready var ray_cast_2d: RayCast2D = $RayCast2D
+
+
+#debug values
+var hitAmount = 0
+
 
 
 func get_input():
@@ -18,6 +24,10 @@ func get_input():
 		input.y -= 1
 	return input
 
+func _process(delta):
+	global_rotation = global_position.direction_to(get_global_mouse_position()).angle() + PI/2.0
+
+
 func _physics_process(delta):
 	var direction = get_input()
 	if direction.length() > 0:
@@ -29,14 +39,15 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 
+
+
+
 func shoot() -> void:
+	$MuzzleFlash.show()
+	$MuzzleFlash/Timer.start()
 	
-	
-	var mousePosition = get_global_mouse_position()
-	var direction = (mousePosition - global_position).normalized()
-	var bullet = bullet_scene.instance()
-	bullet.global_position = global_position
-	bullet.direction(direction)
-	get_parent().add_child(bullet)
+	if ray_cast_2d.is_colliding():
+		hitAmount += 1
+		print(hitAmount)
 	
 	

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwfycf0q72gv1"]
+
+[ext_resource type="PackedScene" uid="uid://cx4rc224ppfkd" path="res://scenes/player.tscn" id="1_2t7yx"]
+[ext_resource type="Texture2D" uid="uid://c3726sx3kd6xt" path="res://assets/shooter/block.png" id="2_ktkov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdkbx"]
+size = Vector2(37.3689, 51.1135)
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2t7yx")]
+
+[node name="environment" type="Node2D" parent="."]
+visibility_layer = 3
+
+[node name="block" type="StaticBody2D" parent="environment"]
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/block"]
+position = Vector2(118, 99)
+scale = Vector2(0.640002, 0.640001)
+texture = ExtResource("2_ktkov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/block"]
+position = Vector2(118.039, 98.9734)
+scale = Vector2(2.19227, 1.60531)
+shape = SubResource("RectangleShape2D_gdkbx")
