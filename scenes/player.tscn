@@ -97,7 +97,7 @@ rotation = 3.14159
 [node name="playerLegsAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_82hhf")
 animation = &"walkingAnim"
-frame_progress = 0.109038
+frame_progress = 0.15002
 
 [node name="playerBodyAnimatedSprite" type="AnimatedSprite2D" parent="."]
 rotation = 0.00632863
