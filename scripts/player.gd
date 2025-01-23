@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 300
+var walkSpeed = 300
+var sneakSpeed = 150
 @export var friction = 0.5
 @export var acceleration = 0.5
 
@@ -44,6 +46,11 @@ func _physics_process(delta):
 		velocity = velocity.lerp(Vector2.ZERO, friction)
 		player_legs_animated_sprite.stop()
 		player_legs_animated_sprite.frame = 1
+		
+	if Input.is_action_pressed("sneak"):
+		speed = sneakSpeed
+	else:
+		speed = walkSpeed
 	move_and_slide()
 
 	if Input.is_action_just_pressed("shoot"):
