@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cx4rc224ppfkd"]
+[gd_scene load_steps=15 format=3 uid="uid://cx4rc224ppfkd"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0m3qi"]
 [ext_resource type="Texture2D" uid="uid://by5cvdp567bt6" path="res://assets/shooter/muzzle_flash.png" id="2_r3l3g"]
@@ -72,6 +72,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_cnq0d"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("playerLegsAnimatedSprite:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("playerLegsAnimatedSprite:rotation")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("playerLegsAnimatedSprite:animation")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("playerLegsAnimatedSprite:frame")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
@@ -91,6 +111,7 @@ collide_with_areas = true
 
 [node name="InteractRayCast2D" type="RayCast2D" parent="."]
 rotation = 3.14159
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -117,6 +138,7 @@ visibility_layer = 3
 z_index = 1
 position = Vector2(3, -1.52588e-05)
 scale = Vector2(-0.557907, 0.966364)
+energy = 8.4
 shadow_enabled = true
 shadow_color = Color(0.0768358, 0.0768358, 0.0768358, 0)
 shadow_filter = 1
@@ -124,5 +146,8 @@ shadow_filter_smooth = 3.3
 texture = ExtResource("5_ocp1w")
 offset = Vector2(27.125, -230.375)
 texture_scale = 5.0
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_cnq0d")
 
 [connection signal="timeout" from="MuzzleFlash/Timer" to="MuzzleFlash" method="hide"]
