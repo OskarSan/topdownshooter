@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dflam11hphbi1"]
+
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_13moy"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_13moy")
+
+[node name="FPSLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PingLabel" type="Label" parent="."]
+offset_top = 28.0
+offset_right = 40.0
+offset_bottom = 51.0
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 39.0
+offset_bottom = 78.0
