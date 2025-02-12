@@ -25,5 +25,7 @@ func _process(delta: float) -> void:
 			var packetPeer = multiplayer.get_multiplayer_peer().get_peer(1)
 			#packetPeer = ENetPacketPeer, get_peer(1) gets the server maybe?
 			ping_label.text = "Ping: %s ms" % packetPeer.get_statistic(3)
+		
+		debug_label.text = str(multiplayer.get_unique_id())
 	else:
 		ping_label.text = "Ping: N/A"

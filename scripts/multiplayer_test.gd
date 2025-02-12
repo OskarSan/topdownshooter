@@ -15,13 +15,14 @@ func _on_host_pressed() -> void:
 	join_button.hide()
 	peer.create_server(3000)
 	multiplayer.multiplayer_peer = peer
-	multiplayer.peer_connected.connect(_add_player)
-	_add_player()
+	multiplayer.peer_connected.connect(add_player)
 	
-func _add_player(id = 1):
+	add_player(multiplayer.get_unique_id())
+	
+func add_player(peer_id):
 	var player = player_scene.instantiate()
-	player.name = str(id)
-	call_deferred("add_child",player)
+	player.name = str(peer_id)
+	add_child(player)
 
 
 func _on_join_pressed() -> void:

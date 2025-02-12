@@ -5,6 +5,8 @@ var walkSpeed = 300
 var sneakSpeed = 150
 @export var friction = 0.5
 @export var acceleration = 0.5
+@export var max_health = 100
+@export var damage_amount = 25
 
 @onready var shoot_ray_cast_2d: RayCast2D = $ShootRayCast2D
 @onready var player_legs_animated_sprite: AnimatedSprite2D = $playerLegsAnimatedSprite
@@ -15,6 +17,7 @@ var sneakSpeed = 150
 
 #debug values
 var hitAmount = 0
+var health = max_health
 
 func _enter_tree():
 	set_multiplayer_authority(name.to_int())
@@ -61,22 +64,26 @@ func _physics_process(delta):
 		else:
 			speed = walkSpeed
 		if Input.is_action_just_pressed("shoot"):
-			shoot()
+			shoot.rpc()
 	
 	move_and_slide()
 
 	
-
+@rpc("any_peer")
 func take_damage():
-	pass
+	health -= damage_amount
+	if health <= 0:
+		health = max_health
+		position = Vector2.ZERO
+		
 
-
+@rpc("call_local")
 func shoot() -> void:
 	$MuzzleFlash.show()
 	$MuzzleFlash/Timer.start()
 	
 	if shoot_ray_cast_2d.is_colliding():
-		hitAmount += 1
-		print(hitAmount)
-	
-	
+		var collider = shoot_ray_cast_2d.get_collider()
+		if collider and collider is CharacterBody2D and collider != self:
+			collider.take_damage.rpc_id(collider.get_multiplayer_authority())
+			
