@@ -27,5 +27,11 @@ text = "Join
 _spawnable_scenes = PackedStringArray("res://scenes/player.tscn")
 spawn_path = NodePath("..")
 
+[node name="PortInput" type="LineEdit" parent="."]
+offset_left = 156.0
+offset_top = 95.0
+offset_right = 223.063
+offset_bottom = 126.0
+
 [connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
