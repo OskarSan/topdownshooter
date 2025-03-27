@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwfycf0q72gv1"]
+[gd_scene load_steps=8 format=3 uid="uid://bwfycf0q72gv1"]
 
 [ext_resource type="Texture2D" uid="uid://c3726sx3kd6xt" path="res://assets/shooter/block.png" id="2_ktkov"]
 [ext_resource type="Texture2D" uid="uid://iyecxqnqul7p" path="res://assets/shooter/ground.png" id="3_kllb8"]
 [ext_resource type="PackedScene" uid="uid://ckovx5wcivf8l" path="res://scenes/multiplayer_test.tscn" id="4_f5sq3"]
-[ext_resource type="PackedScene" uid="uid://dflam11hphbi1" path="res://scenes/HUD.tscn" id="4_mon5b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_e2vqo"]
 
@@ -237,5 +236,3 @@ layer_0/tile_data = PackedInt32Array(-65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075,
 
 [node name="MultiplayerTest" parent="." instance=ExtResource("4_f5sq3")]
 position = Vector2(568, 305)
-
-[node name="HUD" parent="." instance=ExtResource("4_mon5b")]

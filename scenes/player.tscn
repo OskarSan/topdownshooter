@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cx4rc224ppfkd"]
+[gd_scene load_steps=16 format=3 uid="uid://cx4rc224ppfkd"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0m3qi"]
 [ext_resource type="Texture2D" uid="uid://by5cvdp567bt6" path="res://assets/shooter/muzzle_flash.png" id="2_r3l3g"]
 [ext_resource type="Texture2D" uid="uid://5vxeumkj56x" path="res://assets/shooter/player.png" id="3_fkmly"]
 [ext_resource type="Texture2D" uid="uid://bxxmlx117ivno" path="res://assets/shooter/player_legs.png" id="4_74804"]
 [ext_resource type="Texture2D" uid="uid://cgpxtotks630a" path="res://assets/shooter/flashlight.png" id="5_ocp1w"]
+[ext_resource type="PackedScene" uid="uid://dflam11hphbi1" path="res://scenes/HUD.tscn" id="6_7hpcw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0r1nd"]
 radius = 16.0312
@@ -150,5 +151,7 @@ texture_scale = 5.0
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_cnq0d")
+
+[node name="HUD" parent="." instance=ExtResource("6_7hpcw")]
 
 [connection signal="timeout" from="MuzzleFlash/Timer" to="MuzzleFlash" method="hide"]
