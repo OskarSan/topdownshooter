@@ -8,6 +8,7 @@ var port = null
 @onready var host_button: Button = $Host
 @onready var join_button: Button = $Join
 @onready var port_input: LineEdit = $PortInput
+@onready var ip_input: LineEdit = $IpInput
 
 
 
@@ -17,6 +18,8 @@ func _ready():
 		create_server(1234)
 	else:
 		print("Not running in headless mode. Waiting for user input.")
+	port_input.placeholder_text = "Port"
+	ip_input.placeholder_text = "IP Address"
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
 
 func create_server(port: int):
@@ -29,6 +32,7 @@ func _on_host_pressed() -> void:
 	host_button.hide()
 	join_button.hide()
 	port_input.hide()
+	ip_input.hide()
 	peer.create_server(3000)
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(add_player)
@@ -43,7 +47,14 @@ func _on_join_pressed() -> void:
 	host_button.hide()
 	join_button.hide()
 	port_input.hide()
-	peer.create_client("localhost", int(port_input.get_text()))
+	ip_input.hide()
+	var server_port = int(port_input.get_text())
+	
+	var server_ip = ip_input.get_text()
+	if(server_ip == null):
+		server_ip = "localhost"
+	
+	peer.create_client(server_ip, int(port_input.get_text()))
 	multiplayer.multiplayer_peer = peer
 
 func _on_peer_disconnected(id: int):
