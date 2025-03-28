@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 				# Clients get their ping to the server
 				var packetPeer = multiplayer.get_multiplayer_peer().get_peer(1)
 				var ping = packetPeer.get_statistic(3)  # PEER_ROUND_TRIP_TIME
-				var packet_loss = packetPeer.get_statistic(0)  # PEER_PACKETS_LOST
+				var packet_loss = (packetPeer.get_statistic(0) / 65536) * 100.0  # PEER_PACKETS_LOST
 				var remote_port = packetPeer.get_remote_port()
 				var player_id = multiplayer.get_unique_id()
 				#packetPeer = ENetPacketPeer, get_peer(1) == the host
@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 				#Mean packet round trip time for reliable packets.
 				#
 				ping_label.text = "Ping: %s ms" % ping
-				packet_loss_label.text = "Packet Loss %s" % packet_loss
+				packet_loss_label.text = "Packet Loss %s%" % packet_loss
 				address_label.text = str("port: %s" % remote_port)
 				
 				
@@ -63,16 +63,20 @@ func _export_network_data() -> void:
 		
 		var packetPeer = multiplayer.get_multiplayer_peer().get_peer(1)
 		var ping = packetPeer.get_statistic(3)  # PEER_ROUND_TRIP_TIME
-		var packet_loss = packetPeer.get_statistic(0)  # PEER_PACKETS_LOST
+		var packet_loss_percent = (packetPeer.get_statistic(0) / 65536) * 100.0  # PEER_PACKETS_LOST
 		var player_id = multiplayer.get_unique_id()
 
 		# Append data to the network_data array
+		
+		
 		network_data.append({
 			"Client": player_id,
 			"time": Time.get_ticks_msec(),
 			"ping": ping,
-			"packet_loss": packet_loss
+			"packet_loss": packet_loss_percent,
 		})
+
+
 
 		# Export the network data to a JSON file
 		var file = FileAccess.open("user://network_data.json", FileAccess.WRITE)
