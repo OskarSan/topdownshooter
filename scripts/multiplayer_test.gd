@@ -59,6 +59,8 @@ func _on_join_pressed() -> void:
 		print("Error connecting to server at %s:%d: %s" % [server_ip, server_port, result])
 		return
 	multiplayer.multiplayer_peer = peer
+	print("Connected to server at %s:%d" % [server_ip, server_port])
+
 
 func _on_peer_disconnected(id: int):
 	var player_name = str(id)
