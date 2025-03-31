@@ -9,7 +9,7 @@ var port = null
 @onready var join_button: Button = $Join
 @onready var port_input: LineEdit = $PortInput
 @onready var ip_input: LineEdit = $IpInput
-
+@onready var disconnect_timer: Timer = $disconnectTimer
 
 
 func _ready():
@@ -21,6 +21,11 @@ func _ready():
 	port_input.placeholder_text = "Port"
 	ip_input.placeholder_text = "IP Address"
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
+	
+	disconnect_timer.wait_time = 300
+	disconnect_timer.one_shot = true
+	disconnect_timer.timeout.connect(_on_disconnect_timer_timeout)
+	
 
 func create_server(port: int):
 	self.port = port
@@ -64,11 +69,14 @@ func _on_join_pressed() -> void:
 		return
 	multiplayer.multiplayer_peer = peer
 	print("Connected to server at %s:%d" % [server_ip, server_port])
-
-
+	disconnect_timer.start()
+	
 func _on_peer_disconnected(id: int):
 	var player_name = str(id)
 	if has_node(player_name):
 		var player = get_node(player_name)
 		player.queue_free()
 	
+func _on_disconnect_timer_timeout() -> void:
+	if multiplayer.multiplayer_peer:
+		multiplayer.multiplayer_peer.disconnect_peer(peer)

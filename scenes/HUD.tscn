@@ -31,3 +31,5 @@ offset_right = 40.0
 offset_bottom = 129.0
 
 [node name="exportTimer" type="Timer" parent="."]
+
+[node name="disconnectTimer" type="Timer" parent="."]
