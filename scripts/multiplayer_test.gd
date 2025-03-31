@@ -54,7 +54,10 @@ func _on_join_pressed() -> void:
 	if(server_ip == null):
 		server_ip = "localhost"
 	
-	peer.create_client(server_ip, int(port_input.get_text()))
+	var result = peer.create_client(server_ip, int(port_input.get_text()))
+	if result != OK:
+		print("Error connecting to server at %s:%d: %s" % [server_ip, server_port, result])
+		return
 	multiplayer.multiplayer_peer = peer
 
 func _on_peer_disconnected(id: int):
