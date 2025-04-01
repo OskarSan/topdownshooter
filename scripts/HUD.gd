@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 				#Mean packet round trip time for reliable packets.
 				#
 				ping_label.text = "Ping: %s ms" % ping
-				packet_loss_label.text = "Packet Loss %s%" % packet_loss
+				packet_loss_label.text = "Packet Loss %s" % packet_loss
 				address_label.text = str("port: %s" % remote_port)
 				
 				
