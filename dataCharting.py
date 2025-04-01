@@ -39,7 +39,7 @@ def extract_data_from_json(directory):
 def plot_data(data):
     print(data)
     # Plot data for each metric
-    for metric in ["pakettihävikki", "RTT"]:
+    for metric in ["Pakettihävikki", "RTT"]:
         plt.figure()
         for client_name, client_data in data.items():
             # Convert time from milliseconds to seconds
@@ -56,8 +56,8 @@ def plot_data(data):
             # Plot the filtered data
             plt.plot(filtered_time, filtered_metric, linestyle='-', label=client_name)
         
-        plt.title(f"{metric} kaavio")
-        plt.xlabel("Time (s)")
+        plt.title(f"{metric} kuvaaja")
+        plt.xlabel("Aika (s)")
         plt.ylabel(metric)
         plt.grid(True)
         plt.legend()
