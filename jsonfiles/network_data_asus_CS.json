@@ -1,0 +1,722 @@
+[
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 44941
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 49942
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 54943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 59943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 64945
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 69943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 74944
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 32,
+		"time": 79944
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 84944
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 36,
+		"time": 89946
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 36,
+		"time": 94946
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01678466796875,
+		"ping": 36,
+		"time": 99914
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01678466796875,
+		"ping": 36,
+		"time": 104915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01373291015625,
+		"ping": 36,
+		"time": 109915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01373291015625,
+		"ping": 36,
+		"time": 114915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 36,
+		"time": 119915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 36,
+		"time": 124918
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 36,
+		"time": 129930
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 36,
+		"time": 134940
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 36,
+		"time": 139943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 36,
+		"time": 144919
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.006103515625,
+		"ping": 36,
+		"time": 149920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.006103515625,
+		"ping": 36,
+		"time": 154921
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00457763671875,
+		"ping": 36,
+		"time": 159922
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00457763671875,
+		"ping": 36,
+		"time": 164925
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0030517578125,
+		"ping": 36,
+		"time": 169925
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0030517578125,
+		"ping": 36,
+		"time": 174924
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00152587890625,
+		"ping": 36,
+		"time": 179927
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00152587890625,
+		"ping": 36,
+		"time": 184927
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 189932
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 194932
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 199936
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 204946
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 209915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 214913
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 219915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 224914
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 229916
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 234919
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 239919
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 244919
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 36,
+		"time": 249924
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 39,
+		"time": 254935
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0,
+		"ping": 39,
+		"time": 259934
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 40,
+		"time": 264935
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 40,
+		"time": 269940
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03662109375,
+		"ping": 40,
+		"time": 274941
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03662109375,
+		"ping": 40,
+		"time": 279942
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03204345703125,
+		"ping": 41,
+		"time": 284943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03204345703125,
+		"ping": 40,
+		"time": 289943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04730224609375,
+		"ping": 40,
+		"time": 294915
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04730224609375,
+		"ping": 40,
+		"time": 299917
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04119873046875,
+		"ping": 40,
+		"time": 304920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04119873046875,
+		"ping": 40,
+		"time": 309921
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03509521484375,
+		"ping": 40,
+		"time": 314920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03509521484375,
+		"ping": 39,
+		"time": 319920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.030517578125,
+		"ping": 39,
+		"time": 324920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.030517578125,
+		"ping": 39,
+		"time": 329921
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02593994140625,
+		"ping": 39,
+		"time": 334922
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02593994140625,
+		"ping": 39,
+		"time": 339924
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0213623046875,
+		"ping": 39,
+		"time": 344929
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0213623046875,
+		"ping": 39,
+		"time": 349927
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.018310546875,
+		"ping": 39,
+		"time": 354932
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.018310546875,
+		"ping": 39,
+		"time": 359934
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03509521484375,
+		"ping": 39,
+		"time": 364934
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03509521484375,
+		"ping": 39,
+		"time": 369933
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.030517578125,
+		"ping": 39,
+		"time": 374937
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.030517578125,
+		"ping": 39,
+		"time": 379937
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02593994140625,
+		"ping": 39,
+		"time": 384937
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02593994140625,
+		"ping": 39,
+		"time": 389939
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0213623046875,
+		"ping": 39,
+		"time": 394941
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0213623046875,
+		"ping": 39,
+		"time": 399940
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.018310546875,
+		"ping": 39,
+		"time": 404941
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.018310546875,
+		"ping": 39,
+		"time": 409947
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0152587890625,
+		"ping": 39,
+		"time": 414943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0152587890625,
+		"ping": 39,
+		"time": 419947
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01220703125,
+		"ping": 39,
+		"time": 424948
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01220703125,
+		"ping": 39,
+		"time": 429920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 39,
+		"time": 434921
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 39,
+		"time": 439921
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 39,
+		"time": 444923
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 39,
+		"time": 449931
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 108,
+		"time": 454923
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 58,
+		"time": 459925
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.10528564453125,
+		"ping": 42,
+		"time": 464928
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.10528564453125,
+		"ping": 40,
+		"time": 469935
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.091552734375,
+		"ping": 40,
+		"time": 474938
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.091552734375,
+		"ping": 39,
+		"time": 479939
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.079345703125,
+		"ping": 39,
+		"time": 484940
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.079345703125,
+		"ping": 39,
+		"time": 489942
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.06866455078125,
+		"ping": 39,
+		"time": 494917
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.06866455078125,
+		"ping": 39,
+		"time": 499917
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.05950927734375,
+		"ping": 39,
+		"time": 504917
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.05950927734375,
+		"ping": 39,
+		"time": 509922
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0518798828125,
+		"ping": 40,
+		"time": 514920
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0518798828125,
+		"ping": 40,
+		"time": 519923
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04425048828125,
+		"ping": 40,
+		"time": 524925
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.04425048828125,
+		"ping": 40,
+		"time": 529926
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03814697265625,
+		"ping": 40,
+		"time": 534932
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03814697265625,
+		"ping": 40,
+		"time": 539935
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03204345703125,
+		"ping": 40,
+		"time": 544940
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.03204345703125,
+		"ping": 40,
+		"time": 549941
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0274658203125,
+		"ping": 40,
+		"time": 554947
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0274658203125,
+		"ping": 40,
+		"time": 559949
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02288818359375,
+		"ping": 40,
+		"time": 564926
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.02288818359375,
+		"ping": 40,
+		"time": 569930
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 40,
+		"time": 574935
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01983642578125,
+		"ping": 40,
+		"time": 579943
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01678466796875,
+		"ping": 40,
+		"time": 584949
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01678466796875,
+		"ping": 40,
+		"time": 589923
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01373291015625,
+		"ping": 40,
+		"time": 594923
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01373291015625,
+		"ping": 40,
+		"time": 599926
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 40,
+		"time": 604931
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.01068115234375,
+		"ping": 40,
+		"time": 609933
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 40,
+		"time": 614942
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.0091552734375,
+		"ping": 40,
+		"time": 619945
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 40,
+		"time": 624947
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.00762939453125,
+		"ping": 40,
+		"time": 629916
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.006103515625,
+		"ping": 40,
+		"time": 634919
+	},
+	{
+		"Client": 680643374,
+		"packet_loss": 0.006103515625,
+		"ping": 40,
+		"time": 639924
+	}
+]
