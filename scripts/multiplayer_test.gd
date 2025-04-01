@@ -35,8 +35,8 @@ func _on_host_pressed() -> void:
 	ip_input.hide()
 	var result = peer.create_server(3000)
 	if result != OK:
-        print_error("Error creating server on port 3000: %s" % result)
-        return
+		print("Error creating server on port 3000: %s" % result)
+		return
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(add_player)
 	add_player(multiplayer.get_unique_id())

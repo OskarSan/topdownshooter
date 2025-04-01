@@ -215,7 +215,7 @@ sources/0 = SubResource("TileSetAtlasSource_f7xs8")
 
 [node name="environment" type="Node2D" parent="."]
 visibility_layer = 3
-position = Vector2(-57, 51)
+position = Vector2(-56, 51)
 
 [node name="BackGround" type="Area2D" parent="environment"]
 visible = false
