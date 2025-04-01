@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 VARIABLES = {
     "client": "Client",
-    "packet_loss": "packet_loss",
+    "Pakettihävikki": "packet_loss",
     "RTT": "ping",
     "time": "time"
 }
@@ -39,7 +39,7 @@ def extract_data_from_json(directory):
 def plot_data(data):
     print(data)
     # Plot data for each metric
-    for metric in ["packet_loss", "RTT"]:
+    for metric in ["pakettihävikki", "RTT"]:
         plt.figure()
         for client_name, client_data in data.items():
             # Convert time from milliseconds to seconds
@@ -56,7 +56,7 @@ def plot_data(data):
             # Plot the filtered data
             plt.plot(filtered_time, filtered_metric, linestyle='-', label=client_name)
         
-        plt.title(f"Graph for {metric}")
+        plt.title(f"{metric} kaavio")
         plt.xlabel("Time (s)")
         plt.ylabel(metric)
         plt.grid(True)
