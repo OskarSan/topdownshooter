@@ -54,7 +54,7 @@ def plot_data(data):
                     filtered_metric.append(client_data[metric][i])
             
             # Plot the filtered data
-            plt.plot(filtered_time, filtered_metric, linestyle='-', marker='o', label=client_name)
+            plt.plot(filtered_time, filtered_metric, linestyle='-', label=client_name)
         
         plt.title(f"Graph for {metric.capitalize()}")
         plt.xlabel("Time (s)")
