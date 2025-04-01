@@ -39,7 +39,7 @@ def plot_data(data):
     for metric in ["packet_loss", "ping"]:
         plt.figure()
         for client, client_data in grouped_data.items():
-            plt.plot(client_data["time"], client_data[metric], marker='o', linestyle='-', label=f"Client {client}")
+            plt.plot(client_data["time"], client_data[metric], linestyle='-', label=f"Client {client}")
         plt.title(f"Graph for {metric.capitalize()}")
         plt.xlabel("Time (s)")
         plt.ylabel(metric.capitalize())
