@@ -22,7 +22,7 @@ func _ready():
 	ip_input.placeholder_text = "IP Address"
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
 	
-	disconnect_timer.wait_time = 180.0
+	disconnect_timer.wait_time = 600.0
 	disconnect_timer.one_shot = true
 	disconnect_timer.timeout.connect(_on_disconnect_timer_timeout)
 	
