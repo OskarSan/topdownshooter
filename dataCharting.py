@@ -39,7 +39,7 @@ def extract_data_from_json(directory):
 def plot_data(data):
     print(data)
     # Plot data for each metric
-    for metric in ["packet_loss", "RTT"]:
+    for metric in ["pakettihävikki", "RTT"]:
         plt.figure()
         for client_name, client_data in data.items():
             # Convert time from milliseconds to seconds
