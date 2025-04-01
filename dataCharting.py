@@ -5,6 +5,7 @@ import json
 import os
 
 import matplotlib.pyplot as plt
+from tabulate import tabulate
 
 
 VARIABLES = {
@@ -36,8 +37,21 @@ def extract_data_from_json(directory):
                     print(f"Error decoding JSON in file: {filename}")
     return data
 
+def calculate_statistics(data):
+    # Calculate mean, average, and peaks for each client and metric
+    statistics = []
+    for client_name, client_data in data.items():
+        for metric in ["Pakettihävikki", "RTT"]:
+            if client_data[metric]:  # Ensure there is data for the metric
+                mean_value = sum(client_data[metric]) / len(client_data[metric])
+                max_value = max(client_data[metric])
+                min_value = min(client_data[metric])
+                statistics.append([client_name, metric, f"{mean_value:.2f}", f"{min_value:.2f}", f"{max_value:.2f}"])
+    return statistics
+
+
 def plot_data(data):
-    print(data)
+    #print(data)
     # Plot data for each metric
     for metric in ["Pakettihävikki", "RTT"]:
         plt.figure()
@@ -68,6 +82,10 @@ if __name__ == "__main__":
     json_directory = "./jsonfiles"  # Replace with your JSON files directory
     extracted_data = extract_data_from_json(json_directory)
     if extracted_data:
+        stats = calculate_statistics(extracted_data)
+        print("\nStatistics Table:")
+        print(tabulate(stats, headers=["Client", "Metric", "Mean", "Min", "Max"], tablefmt="grid"))
+       
         plot_data(extracted_data)
     else:
         print("No data found to plot.")
