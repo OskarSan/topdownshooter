@@ -39,12 +39,23 @@ def extract_data_from_json(directory):
 def plot_data(data):
     print(data)
     # Plot data for each metric
-    for metric in ["pakettihävikki", "RTT"]:
+    for metric in ["packet_loss", "ping"]:
         plt.figure()
         for client_name, client_data in data.items():
             # Convert time from milliseconds to seconds
             time_in_seconds = [t / 1000 for t in client_data["time"]]
-            plt.plot(time_in_seconds, client_data[metric], linestyle='-', label=client_name)
+            
+            # Filter data to include only time values between 100 and 600 seconds
+            filtered_time = []
+            filtered_metric = []
+            for i, t in enumerate(time_in_seconds):
+                if 100 <= t <= 600:
+                    filtered_time.append(t)
+                    filtered_metric.append(client_data[metric][i])
+            
+            # Plot the filtered data
+            plt.plot(filtered_time, filtered_metric, linestyle='-', marker='o', label=client_name)
+        
         plt.title(f"Graph for {metric.capitalize()}")
         plt.xlabel("Time (s)")
         plt.ylabel(metric.capitalize())
