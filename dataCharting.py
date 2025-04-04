@@ -6,6 +6,7 @@ import os
 
 import matplotlib.pyplot as plt
 from tabulate import tabulate
+import math
 
 
 VARIABLES = {
@@ -46,10 +47,11 @@ def calculate_statistics(data):
                 mean_value = sum(client_data[metric]) / len(client_data[metric])
                 max_value = max(client_data[metric])
                 min_value = min(client_data[metric])
-                statistics.append([client_name, metric, f"{mean_value:.2f}", f"{min_value:.2f}", f"{max_value:.2f}"])
+                variance = math.sqrt(sum((x - mean_value) ** 2 for x in client_data[metric]) / len(client_data[metric]))
+                statistics.append([client_name, metric, f"{mean_value:.2f}", f"{min_value:.2f}", f"{max_value:.2f}", f"{variance:.2f}"])
     return statistics
 
-
+    
 def plot_data(data):
     #print(data)
     # Plot data for each metric
@@ -84,7 +86,7 @@ if __name__ == "__main__":
     if extracted_data:
         stats = calculate_statistics(extracted_data)
         print("\nStatistics Table:")
-        print(tabulate(stats, headers=["Client", "Metric", "Mean", "Min", "Max"], tablefmt="grid"))
+        print(tabulate(stats, headers=["Client", "Metric", "Mean", "Min", "Max", "Variance"], tablefmt="grid"))
        
         plot_data(extracted_data)
     else:
