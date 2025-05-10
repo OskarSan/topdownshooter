@@ -11,6 +11,8 @@ var port = null
 @onready var ip_input: LineEdit = $IpInput
 @onready var disconnect_timer: Timer = $disconnectTimer
 
+signal player_added(player)
+
 
 func _ready():
 	if DisplayServer.get_name() == "headless":
@@ -51,6 +53,7 @@ func add_player(peer_id):
 	var player = player_scene.instantiate()
 	player.name = str(peer_id)
 	add_child(player)
+	emit_signal("player_added", player)
 
 func _on_join_pressed() -> void:
 	host_button.hide()

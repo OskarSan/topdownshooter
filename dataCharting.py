@@ -11,8 +11,8 @@ import math
 
 VARIABLES = {
     "client": "Client",
-    "Pakettihävikki": "packet_loss",
-    "RTT": "ping",
+    "Pakettihävikki (%)": "packet_loss",
+    "RTT (ms)": "ping",
     "time": "time"
 }
 
@@ -42,7 +42,7 @@ def calculate_statistics(data):
     # Calculate mean, average, and peaks for each client and metric
     statistics = []
     for client_name, client_data in data.items():
-        for metric in ["Pakettihävikki", "RTT"]:
+        for metric in ["Pakettihävikki (%)", "RTT (ms)"]:
             if client_data[metric]:  # Ensure there is data for the metric
                 mean_value = sum(client_data[metric]) / len(client_data[metric])
                 max_value = max(client_data[metric])
@@ -55,7 +55,7 @@ def calculate_statistics(data):
 def plot_data(data):
     #print(data)
     # Plot data for each metric
-    for metric in ["Pakettihävikki", "RTT"]:
+    for metric in ["Pakettihävikki (%)", "RTT (ms)"]:
         plt.figure()
         for client_name, client_data in data.items():
             # Convert time from milliseconds to seconds

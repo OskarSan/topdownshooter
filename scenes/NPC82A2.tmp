@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cl05kxn640scf"]
+
+[ext_resource type="Texture2D" uid="uid://d0svbipp6o0t5" path="res://assets/imprisonmentOfJacob/botti_zombo.png" id="1_aqk38"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_go7lb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5aqe2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtelw"]
+atlas = ExtResource("1_aqk38")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc7m8"]
+atlas = ExtResource("1_aqk38")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_483fd"]
+atlas = ExtResource("1_aqk38")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ylxxu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtelw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc7m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_483fd")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="NPC" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 15
+script = ExtResource("1_go7lb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5aqe2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ylxxu")
+animation = &"walking"
